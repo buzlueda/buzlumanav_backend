@@ -24,4 +24,9 @@ public class User : BaseEntity<Guid>
     public virtual ICollection<UserAddress> UserAddresses { get; set; } = new HashSet<UserAddress>();
     public virtual ICollection<Order> Orders { get; set; } = new HashSet<Order>();
     public virtual ICollection<UserFavoriteItem> UserFavoriteItems { get; set; } = new HashSet<UserFavoriteItem>();
+
+    public void GenerateFullName()
+    {
+        FullName = $"{FirstName} {LastName}";
+    }
 }   

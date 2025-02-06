@@ -1,4 +1,8 @@
 ﻿using System.Reflection;
+using BuzluManav.Core.Application.Interfaces.Services;
+using BuzluManav.Core.Application.Services.AuthService;
+using BuzluManav.Core.Application.Services.RefreshTokenService;
+using BuzluManav.Core.Application.Services.UserService;
 using CorePackages.Core.Application.Pipelines.Authorization;
 using CorePackages.Core.Application.Pipelines.Caching;
 using CorePackages.Core.Application.Pipelines.Logging;
@@ -30,7 +34,9 @@ public static class ApplicationServiceRegistration
         services.AddSubClassesOfType(Assembly.GetExecutingAssembly(), typeof(BaseBusinessRules));
 
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-        //add services here
+        services.AddScoped<IAuthService, AuthManager>();
+        services.AddScoped<IUserService, UserManager>();
+        services.AddScoped<IRefreshTokenService, RefreshTokenManager>();
         return services;
     }
     public static IServiceCollection AddSubClassesOfType(

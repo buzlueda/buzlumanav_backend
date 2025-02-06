@@ -19,7 +19,7 @@ public class UserConfig : IEntityTypeConfiguration<User>
         builder.Property(x => x.Email).HasColumnName("Email").IsRequired();
         builder.Property(x => x.Phone).HasColumnName("Phone").IsRequired();
         builder.Property(x => x.BirthDate).HasColumnName("BirthDate").IsRequired();
-        builder.Property(x => x.UserAddressId).HasColumnName("UserAddressId").IsRequired();
+        builder.Property(x => x.UserAddressId).HasColumnName("UserAddressId");
         builder.Property(x => x.ProfilePhotoUrl).HasColumnName("ProfilePhotoUrl").IsRequired();
         builder.Property(x => x.PasswordHash).HasColumnName("PasswordHash").IsRequired();
         builder.Property(x => x.PasswordSalt).HasColumnName("PasswordSalt").IsRequired();

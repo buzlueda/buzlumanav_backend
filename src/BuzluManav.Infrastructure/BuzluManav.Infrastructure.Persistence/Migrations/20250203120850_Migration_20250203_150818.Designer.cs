@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BuzluManav.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(BuzluManavDbContext))]
-    [Migration("20250126151246_Migration_20250126_181226")]
-    partial class Migration_20250126_181226
+    [Migration("20250203120850_Migration_20250203_150818")]
+    partial class Migration_20250203_150818
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -217,13 +217,13 @@ namespace BuzluManav.Infrastructure.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 1, 26, 18, 12, 46, 428, DateTimeKind.Local).AddTicks(2176),
+                            CreatedAt = new DateTime(2025, 2, 3, 15, 8, 50, 164, DateTimeKind.Local).AddTicks(4353),
                             Name = "Admin"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2025, 1, 26, 18, 12, 46, 430, DateTimeKind.Local).AddTicks(4916),
+                            CreatedAt = new DateTime(2025, 2, 3, 15, 8, 50, 166, DateTimeKind.Local).AddTicks(7366),
                             Name = "Customer"
                         });
                 });
@@ -363,31 +363,31 @@ namespace BuzluManav.Infrastructure.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 1, 26, 18, 12, 46, 436, DateTimeKind.Local).AddTicks(7667),
+                            CreatedAt = new DateTime(2025, 2, 3, 15, 8, 50, 173, DateTimeKind.Local).AddTicks(1036),
                             Name = "Pending"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2025, 1, 26, 18, 12, 46, 436, DateTimeKind.Local).AddTicks(7688),
+                            CreatedAt = new DateTime(2025, 2, 3, 15, 8, 50, 173, DateTimeKind.Local).AddTicks(1052),
                             Name = "Preparing"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2025, 1, 26, 18, 12, 46, 436, DateTimeKind.Local).AddTicks(7689),
+                            CreatedAt = new DateTime(2025, 2, 3, 15, 8, 50, 173, DateTimeKind.Local).AddTicks(1053),
                             Name = "OnTheWay"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2025, 1, 26, 18, 12, 46, 436, DateTimeKind.Local).AddTicks(7691),
+                            CreatedAt = new DateTime(2025, 2, 3, 15, 8, 50, 173, DateTimeKind.Local).AddTicks(1054),
                             Name = "Delivered"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2025, 1, 26, 18, 12, 46, 436, DateTimeKind.Local).AddTicks(7692),
+                            CreatedAt = new DateTime(2025, 2, 3, 15, 8, 50, 173, DateTimeKind.Local).AddTicks(1056),
                             Name = "Canceled"
                         });
                 });
@@ -591,7 +591,7 @@ namespace BuzluManav.Infrastructure.Persistence.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("TCNO");
 
-                    b.Property<int>("UserAddressId")
+                    b.Property<int?>("UserAddressId")
                         .HasColumnType("int")
                         .HasColumnName("UserAddressId");
 

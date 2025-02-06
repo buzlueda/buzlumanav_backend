@@ -23,7 +23,7 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
-//app.ConfigureCustomExceptionMiddleware();
+app.ConfigureCustomExceptionMiddleware();
 app.MapControllers();
 
 app.ConfigureCors(builder.Configuration);

@@ -1,5 +1,6 @@
 using BuzluManav.Core.Application;
 using BuzluManav.Infrastructure.Persistence;
+using BuzluManav.Infrastructure.Security;
 using BuzluManav.Presentation.WebAPI.Infrastructure.Constants;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
@@ -25,7 +26,7 @@ public static class ServiceConfiguration
     {
         services.AddApplicationServices();
         services.AddPersistenceServices(configuration);
-        // services.AddSecurityServices(configuration);
+        services.AddSecurityServices(configuration);
         return services;
     }
     public static IServiceCollection AddCorsConfiguration(this IServiceCollection services)
