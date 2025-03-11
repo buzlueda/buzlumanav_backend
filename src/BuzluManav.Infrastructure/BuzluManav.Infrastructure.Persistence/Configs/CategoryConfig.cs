@@ -13,8 +13,9 @@ public class CategoryConfig : IEntityTypeConfiguration<Category>
         builder.Property(x => x.Id).HasColumnName("CategoryId");
         builder.Property(x => x.Name).HasColumnName("Name").IsRequired();
         builder.Property(x => x.Description).HasColumnName("Description").IsRequired();
-        builder.Property(x => x.ImageUrl).HasColumnName("ImageUrl").IsRequired();
-        builder.Property(x => x.IsDeleted).HasColumnName("IsDeleted").IsRequired();
+        builder.Property(x => x.ImageUrl).HasColumnName("ImageUrl");
+        builder.Property(x => x.IsActive).HasColumnName("IsActive").IsRequired();
+        builder.Property(x => x.Slug).HasColumnName("Slug").IsRequired();
 
         builder.Property(x => x.CreatedAt).HasColumnName("CreatedAt").IsRequired();
         builder.Property(x => x.ModifiedAt).HasColumnName("ModifiedAt");

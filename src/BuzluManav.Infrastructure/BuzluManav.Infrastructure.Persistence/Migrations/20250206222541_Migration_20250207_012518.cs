@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BuzluManav.Infrastructure.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class Migration_20250203_150818 : Migration
+    public partial class Migration_20250207_012518 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -22,7 +22,8 @@ namespace BuzluManav.Infrastructure.Persistence.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false),
+                    Slug = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DeletedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -358,8 +359,8 @@ namespace BuzluManav.Infrastructure.Persistence.Migrations
                 columns: new[] { "OperationClaimId", "CreatedAt", "DeletedAt", "ModifiedAt", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2025, 2, 3, 15, 8, 50, 164, DateTimeKind.Local).AddTicks(4353), null, null, "Admin" },
-                    { 2, new DateTime(2025, 2, 3, 15, 8, 50, 166, DateTimeKind.Local).AddTicks(7366), null, null, "Customer" }
+                    { 1, new DateTime(2025, 2, 7, 1, 25, 41, 104, DateTimeKind.Local).AddTicks(6826), null, null, "Admin" },
+                    { 2, new DateTime(2025, 2, 7, 1, 25, 41, 106, DateTimeKind.Local).AddTicks(9261), null, null, "Customer" }
                 });
 
             migrationBuilder.InsertData(
@@ -367,11 +368,11 @@ namespace BuzluManav.Infrastructure.Persistence.Migrations
                 columns: new[] { "OrderStatusId", "CreatedAt", "DeletedAt", "ModifiedAt", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2025, 2, 3, 15, 8, 50, 173, DateTimeKind.Local).AddTicks(1036), null, null, "Pending" },
-                    { 2, new DateTime(2025, 2, 3, 15, 8, 50, 173, DateTimeKind.Local).AddTicks(1052), null, null, "Preparing" },
-                    { 3, new DateTime(2025, 2, 3, 15, 8, 50, 173, DateTimeKind.Local).AddTicks(1053), null, null, "OnTheWay" },
-                    { 4, new DateTime(2025, 2, 3, 15, 8, 50, 173, DateTimeKind.Local).AddTicks(1054), null, null, "Delivered" },
-                    { 5, new DateTime(2025, 2, 3, 15, 8, 50, 173, DateTimeKind.Local).AddTicks(1056), null, null, "Canceled" }
+                    { 1, new DateTime(2025, 2, 7, 1, 25, 41, 112, DateTimeKind.Local).AddTicks(9313), null, null, "Pending" },
+                    { 2, new DateTime(2025, 2, 7, 1, 25, 41, 112, DateTimeKind.Local).AddTicks(9326), null, null, "Preparing" },
+                    { 3, new DateTime(2025, 2, 7, 1, 25, 41, 112, DateTimeKind.Local).AddTicks(9327), null, null, "OnTheWay" },
+                    { 4, new DateTime(2025, 2, 7, 1, 25, 41, 112, DateTimeKind.Local).AddTicks(9329), null, null, "Delivered" },
+                    { 5, new DateTime(2025, 2, 7, 1, 25, 41, 112, DateTimeKind.Local).AddTicks(9330), null, null, "Canceled" }
                 });
 
             migrationBuilder.CreateIndex(

@@ -90,9 +90,9 @@ namespace BuzluManav.Infrastructure.Persistence.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("ImageUrl");
 
-                    b.Property<bool>("IsDeleted")
+                    b.Property<bool>("IsActive")
                         .HasColumnType("bit")
-                        .HasColumnName("IsDeleted");
+                        .HasColumnName("IsActive");
 
                     b.Property<DateTime?>("ModifiedAt")
                         .HasColumnType("datetime2")
@@ -102,6 +102,11 @@ namespace BuzluManav.Infrastructure.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Name");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Slug");
 
                     b.HasKey("Id")
                         .HasName("PK_Categories");
@@ -214,13 +219,13 @@ namespace BuzluManav.Infrastructure.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 2, 3, 15, 8, 50, 164, DateTimeKind.Local).AddTicks(4353),
+                            CreatedAt = new DateTime(2025, 2, 7, 1, 25, 41, 104, DateTimeKind.Local).AddTicks(6826),
                             Name = "Admin"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2025, 2, 3, 15, 8, 50, 166, DateTimeKind.Local).AddTicks(7366),
+                            CreatedAt = new DateTime(2025, 2, 7, 1, 25, 41, 106, DateTimeKind.Local).AddTicks(9261),
                             Name = "Customer"
                         });
                 });
@@ -360,31 +365,31 @@ namespace BuzluManav.Infrastructure.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 2, 3, 15, 8, 50, 173, DateTimeKind.Local).AddTicks(1036),
+                            CreatedAt = new DateTime(2025, 2, 7, 1, 25, 41, 112, DateTimeKind.Local).AddTicks(9313),
                             Name = "Pending"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2025, 2, 3, 15, 8, 50, 173, DateTimeKind.Local).AddTicks(1052),
+                            CreatedAt = new DateTime(2025, 2, 7, 1, 25, 41, 112, DateTimeKind.Local).AddTicks(9326),
                             Name = "Preparing"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2025, 2, 3, 15, 8, 50, 173, DateTimeKind.Local).AddTicks(1053),
+                            CreatedAt = new DateTime(2025, 2, 7, 1, 25, 41, 112, DateTimeKind.Local).AddTicks(9327),
                             Name = "OnTheWay"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2025, 2, 3, 15, 8, 50, 173, DateTimeKind.Local).AddTicks(1054),
+                            CreatedAt = new DateTime(2025, 2, 7, 1, 25, 41, 112, DateTimeKind.Local).AddTicks(9329),
                             Name = "Delivered"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2025, 2, 3, 15, 8, 50, 173, DateTimeKind.Local).AddTicks(1056),
+                            CreatedAt = new DateTime(2025, 2, 7, 1, 25, 41, 112, DateTimeKind.Local).AddTicks(9330),
                             Name = "Canceled"
                         });
                 });
