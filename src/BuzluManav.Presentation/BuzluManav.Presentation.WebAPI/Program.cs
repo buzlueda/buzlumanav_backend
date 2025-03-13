@@ -11,7 +11,7 @@ builder.Services.AddSignalR();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-// builder.Services.AddHangfire(config => config.UseSqlServerStorage(builder.Configuration.GetConnectionString("ErgitDbConnection")));
+// builder.Services.AddHangfire(config => config.UseSqlServerStorage(builder.Configuration.GetConnectionString("BuzluManavDbConnection")));
 // builder.Services.AddHangfireServer();
 
 var app = builder.Build();
